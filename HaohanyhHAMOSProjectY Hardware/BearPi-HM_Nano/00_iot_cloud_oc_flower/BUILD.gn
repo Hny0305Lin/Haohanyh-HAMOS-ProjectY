@@ -1,0 +1,53 @@
+# Copyright (c) 2020 Nanjing Xiaoxiongpai Intelligent Technology Co., Ltd.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE
+
+static_library("cloud_oc_flower") {
+    sources = [
+        "iot_cloud_sample.c",
+        "src/wifi_connect.c",
+        "src/flower.c",
+        "src/huawei_iot.c",        
+        "nfc/NT3H.c",
+        "nfc/nfc.c",
+        "nfc/nfc_app.c",
+        "nfc/ndef/rtd/nfcForum.c",
+        "nfc/ndef/rtd/rtdText.c",
+        "nfc/ndef/rtd/rtdUri.c",
+        "nfc/ndef/ndef.c",  
+        
+    ]
+    
+    cflags = [ "-Wno-unused-variable" ]
+    cflags += [ "-Wno-unused-but-set-variable" ]
+    cflags += [ "-Wno-unused-parameter" ]
+    
+    include_dirs = [
+        "//base/iot_hardware/peripheral/interfaces/kits",
+        "//foundation/communication/wifi_lite/interfaces/wifiservice",
+        "//third_party/cJSON",
+        "//third_party/iot_link/oc_mqtt/oc_mqtt_al",
+        "//third_party/iot_link/oc_mqtt/oc_mqtt_profile_v5",
+        "//third_party/iot_link/inc",
+        "//third_party/iot_link/queue",
+        "include",
+        "nfc/ndef",
+        "nfc/ndef/rtd/",
+        "nfc"
+    ]
+
+    deps = [ 
+             "//third_party/iot_link:iot_link",
+    ]
+
+}
