@@ -74,6 +74,11 @@ ProjectX我们已经交出一份答卷了，ProjectY将会是我们第二份答�
 作者Gitee仓库：[点我进入](https://gitee.com/LingYuDaXia/bearpi-hm_nano/blob/master/applications/BearPi/BearPi-HM_Nano/docs/quick-start/BearPi-HM_Nano%20%E6%8A%A4%E8%8A%B1%E4%BD%BF%E8%80%85%E6%A1%88%E4%BE%8B%E6%95%99%E7%A8%8B%EF%BC%88%E5%8F%8C%E6%89%A9%E5%B1%95%E6%9D%BF%E9%9B%86%E6%88%90%E6%96%B9%E5%BC%8F%EF%BC%89.md)
 
 ### 版权所有 (C) 2019-FUTURE 浩瀚银河，版权所有。
+**永久开源，二次开发请署名“浩瀚银河”**
+**Huawei-IAM-Java**，使用开源协议：Haohanyh Computer Software Products Open Source LICENSE
+GitHub地址：[点我进入](https://github.com/Hny0305Lin/Huawei-IAM-Java)
+
+### 版权所有 (C) 2019-FUTURE 浩瀚银河，版权所有。
 ### HAMOS 使用 浩瀚银河计算机软件产品源代码开放协议
 **永久开源，二次开发请署名“浩瀚银河”**
 使用开源协议：Haohanyh Computer Software Products Open Source LICENSE
