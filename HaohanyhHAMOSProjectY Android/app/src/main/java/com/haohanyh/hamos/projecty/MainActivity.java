@@ -1,16 +1,21 @@
 /* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE */
 package com.haohanyh.hamos.projecty;
 
+import static com.haohanyh.hamos.huawei.Huawei.GetHuawei;
+import static com.haohanyh.hamos.projecty.R.drawable;
+import static com.haohanyh.hamos.projecty.R.id;
+import static com.haohanyh.hamos.projecty.R.layout;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import static com.haohanyh.hamos.projecty.R.*;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,14 +33,26 @@ public class MainActivity extends Activity {
     public TextView TxtHumi;
     public TextView TxtSoil;
     public Button Btn;
-    private final String TAG = "MainActivity主活动";
+    //进程类，继承父类Threads
     public HuhuaThread huhua;
+    public WaterControlThread water;
+    //bool
+    private volatile boolean Ctrl = false;
     //自行设置项目ID和硬件ID，这些都是有办法查得到的，不知道的看我教程！！！！！！
-    private String project_id = "";
-    private String device_id = "";
+    private final String project_id = "";
+    private final String device_id = "";
+    //服务ID、命令名字、命令服务名、命令属性（也就是上报值），后面的链接是在线调试，可以帮助你得到这些变量。
+    //（配置好你的板子的过程，也配置了这些，如果忘记了但不想重新创建设备，就这么找吧）
+    //https://console.huaweicloud.com/iotdm/?region=cn-north-4#/dm-portal/monitor/online-debugger
+    //⚠警告，command_value是可以改变为ON的，因为我没设置成final，这里注意一下也不能写错哦。（不过也不用写On，硬件有代码浇花一定时间后会硬件级暂停）
+    private final String service_id = "AutoWater";
+    private final String command_name = "AutoWater_Control_Pump";
+    private final String command_param = "Motor";
+    private String command_value = "OFF";
     //Timer、Handler和计数器
     final Timer newtimer = new Timer();
     final Handler handler = new Handler();
+    final Handler handlerII = new Handler();
     int count = 0;
 
     @Override
@@ -49,12 +66,10 @@ public class MainActivity extends Activity {
             public void run() {
                 count++;
                 Log.w("浩瀚银河HAMOS启动计时:", String.valueOf(count));
-                if(count == 5) {
-                    Log.w("浩瀚银河:", "开启联动！");
-                }
-                if(count >= 5) {
-                    HuHuaStart();
-                }
+                if(count == 5) { Log.w("浩瀚银河:", "护花进程开启！"); }
+                if(count >= 5) { HuHuaStart(); }
+                if(count == 10) { Log.w("浩瀚银河:", "浇花进程开启！"); }
+                if(count >= 10) { WaterStart(); }
             }
         };
         newtimer.schedule(task,100,1000);
@@ -77,7 +92,7 @@ public class MainActivity extends Activity {
      * HuHuaStart()为护花进程开启
      */
     private void HuHuaStart(){
-        Log.i( TAG , "护花进程，开启！" );
+        Log.i( "Action!" , "护花进程，开启！" );
         huhua = new HuhuaThread();
         huhua.start();
     }
@@ -91,8 +106,9 @@ public class MainActivity extends Activity {
          * 自动跑，不用理它，我基本上帮你们写好了这些了。
          */
         public void run() {
-            Huawei.getHuawei().post();
-            String result = Huawei.getHuawei().get("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + project_id + "/devices/" + device_id + "/shadow");
+            GetHuawei().Post();
+            String result = GetHuawei().Get("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + project_id + "/devices/" + device_id + "/shadow");
+            //我们把从华为云，通过get函数查询到的设备数据，做数据显示和浇花控制。
             DataChangeShow(result);
         }
         /*
@@ -153,5 +169,39 @@ public class MainActivity extends Activity {
         }
     }
 
+    /*
+     * WaterStart()为护花进程开启后，启动的智能判断临界值情况，里面的算法其实很简单，就是触发到时设备浇花。
+     */
+    private void WaterStart(){
+        Log.i( "Action!" , "浇花进程，开启！" );
+        water = new WaterControlThread();
+        water.start();
+    }
 
+    /*
+     * Water进程类
+     * 触发时，浇花3s后，暂停浇花。
+     */
+    private class WaterControlThread extends Thread {
+        @Override
+        public void run() {
+            Btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    command_value = "ON";
+                    Toast.makeText(MainActivity.this, "浇花中", Toast.LENGTH_SHORT).show();
+                    WaterSomeFlower();
+                    Toast.makeText(MainActivity.this, "浇花完成", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+
+        /*
+         * 定制函数，浇花函数。
+         */
+        private void WaterSomeFlower() {
+            //请保证6个东西你都填写了再执行该函数~
+            GetHuawei().CreateJsonToControlSenderneedPost(project_id,device_id,service_id,command_name,command_param,command_value);
+        }
+    }
 }

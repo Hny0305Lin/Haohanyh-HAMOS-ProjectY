@@ -16,7 +16,7 @@
         android:roundIcon="@drawable/a1"
         android:supportsRtl="true"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:theme="@style/Theme.MyApplication"
+        android:theme="@style/Theme.HAMOS"
         tools:targetApi="n">
         <activity
             android:name=".MainActivity"

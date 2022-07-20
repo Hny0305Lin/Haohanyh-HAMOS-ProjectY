@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "HAMOS"
 include ':app'
+include ':app:huawei'

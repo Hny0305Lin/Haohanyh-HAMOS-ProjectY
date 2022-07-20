@@ -1,7 +1,5 @@
 /* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE */
-package com.haohanyh.hamos.projecty;
-
-import android.util.Log;
+package com.haohanyh.hamos.huawei;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,18 +25,17 @@ public class Huawei {
     //获取得到的HUAWEI华为云Token，不许填写！！！
     protected String HUAWEITOKEN = "";
     //需要添加的IAM账号名、账号密码。想要获取IAM信息？点它即可→https://support.huaweicloud.com/api-iam/iam_17_0002.html
-    protected String JsonDomainName = "";
-    protected String JsonName = "";
-    protected String JsonPassword = "";
+    protected final String JsonDomainName = "";
+    protected final String JsonName = "";
+    protected final String JsonPassword = "";
     //下面老三样，不要动！！！
     protected Huawei() { }
-    protected static Huawei getHuawei() { return huawei.network; }
+    public static Huawei GetHuawei() { return huawei.network; }
     protected static class huawei { private static final Huawei network = new Huawei(); }
-
     /*
-     * 灰度测试，创建JSON转String，方便post函数进行使用和理解。
+     * 创建JSON转String，方便post函数进行使用和理解。
      */
-    protected String CreateJsonToPost() {
+    public String CreateJsonToPost() {
         JSONObject First = new JSONObject();
         try {
             JSONObject Auth = new JSONObject();
@@ -69,10 +66,58 @@ public class Huawei {
     }
 
     /*
+     * 创建JSON转String，方便ControlSenderneedPost函数进行使用和理解。
+     */
+    public void CreateJsonToControlSenderneedPost(String project_id,String device_id,String service_id,String command_name,String command_param,String command_value) {
+        String jsonParas = "";
+        JSONObject object = new JSONObject();
+        try {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("service_id", service_id);
+            jsonObject.put("command_name", command_name);
+            object.put(command_param, command_value);
+            jsonObject.put("paras", object);
+            jsonParas = jsonObject.toString();
+            ControlSenderneedpost(jsonParas,project_id,device_id);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /*
+     * CreateCommand 下发设备命令
+     * 华为云API调试地址:https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IoTDA&api=CreateCommand
+     * 护花使者：采用E53-IA1，MotorStatus
+     * 小熊派：（E53-IA1 MotorStatus、LightStatus）（E53-ST1 BeepStatus）（E53_SC1 LightStatus）
+     */
+    public void ControlSenderneedpost(String json,String project_id,String device_id) {
+        RequestBody body = RequestBody.create(MediaType.parse("application/json;charset=utf-8"), json);
+        Request request = new Request.Builder()
+                .url("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + project_id + "/devices/" + device_id + "/commands")
+                .addHeader("X-Auth-Token",HUAWEITOKEN)
+                .post(body)
+                .build();
+
+        OkHttpClient mOkHttpClient = new OkHttpClient();
+        mOkHttpClient.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                System.out.println(e.getLocalizedMessage() + "，失败");
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                System.out.println("函数链接: " + response.body().string());
+            }
+        });
+    }
+
+    /*
      * ShowDeviceShadow 查询设备影子数据
      * 华为云API调试地址:https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IoTDA&api=ShowDeviceShadow
      */
-    protected String get(String url) {
+
+    public String Get(String url) {
         String content = "";
         URLConnection urlConnection = null;
         try {
@@ -92,7 +137,7 @@ public class Huawei {
                 }
                 content = bs.toString();
             } else if (responseCode == 401) {
-                System.out.println("浩瀚银河Get函数灰度测试:failed");
+                System.out.println("Get函数:failed");
             }
             return content;
         } catch (IOException e) {
@@ -105,9 +150,10 @@ public class Huawei {
      * KeystoneCreateUserTokenByPassword 获取IAM用户Token(使用密码)
      * 华为云API调试地址：https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=IAM&api=KeystoneCreateUserTokenByPassword
      */
-    protected void post() {
+
+    public void Post() {
+
         String jsonwenben = CreateJsonToPost();
-        Log.w("浩瀚银河灰度测试创建JSON操作",CreateJsonToPost());
         RequestBody body = RequestBody.create(MediaType.parse("application/json;charset=utf-8"), jsonwenben);
         Request request = new Request.Builder()
                 .url("https://iam.cn-north-4.myhuaweicloud.com/v3/auth/tokens")
@@ -117,15 +163,16 @@ public class Huawei {
         mOkHttpClient.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                System.out.println("浩瀚银河post函数情况: " + e.getLocalizedMessage() + "，链接失败");
+                System.out.println(e.getLocalizedMessage() + "，失败");
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                System.out.println("浩瀚银河post函数链接: " + response.body().string());
-                System.out.println("浩瀚银河post函数头部读取: " + response.header("x-subject-token"));
                 HUAWEITOKEN = response.header("x-subject-token");
             }
         });
     }
+
+
+
 }
