@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fuzhou1">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <EditText
+        android:id="@+id/et_data"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/label_customize_jianbian_03"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/bt_write_text"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@drawable/label_customize_jianbian_03"
+        android:text="@string/haohanyh_hamos_lights_project_nfc"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

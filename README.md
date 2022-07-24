@@ -7,6 +7,7 @@ Haohanyh-HAMOS-ProjectY是我们的一个LiGHTs计划中的部分，继ProjectX�
 > 芯片资料:[点我下载](https://gitee.com/bearpi/bearpi-hm_nano/raw/master/applications/BearPi/BearPi-HM_Nano/docs/board/BearPi_HM%20Nano%20%E8%8A%AF%E7%89%87%E6%89%8B%E5%86%8C.pdf)
 > 有关资料:[gitee点我查看](https://gitee.com/bearpi/bearpi-hm_nano)
 > 往期我们的ProjectX:[Github](https://github.com/Hny0305Lin/Haohanyh-HAMOS-ProjectX) [Gitee](https://gitee.com/light-harmonyOS/Haohanyh-HAMOS-ProjectX)
+> 这一次我们的PrijectY：[Github](https://github.com/Hny0305Lin/Haohanyh-HAMOS-ProjectY) [Gitee](https://gitee.com/light-harmonyOS/Haohanyh-HAMOS-ProjectY)
 ⚠️强烈建议中国大陆用户能使用GitHub就使用GitHub，Gitee仅仅是我们浩瀚银河中国大陆的仓库设置地，未来可能会缺少重要更新。
 
 # 继ProjectX项目后的又一份，继续使用浩瀚银河的自有中文开源协议和鸿蒙硬件操作系统与Android APP的结合项目
@@ -17,6 +18,12 @@ Haohanyh-HAMOS-ProjectY是我们的一个LiGHTs计划中的部分，继ProjectX�
 >
 > 下载地址2: https://git.haohanyh.top:3001/Haohanyh/LICENSE
 
+# 感谢北京居若科技有限公司，对浩瀚银河ProjectY的项目支持和提供高防服务，保证关键函数判没有任何网络问题。
+``` Java
+public boolean HaohanyhOranMeCDNDecideData(String Url, String S_data_device_id, String data_node_id, String data_product_id, String S_data_product_name) throws JSONException {...}
+```
+![Logo](https://dash.oran.me/assets/OranMe2020.jpg)
+
 ### 智能浇花(BearPi小熊派智能农业E53(温湿度采集和LED转子控制) + 扩展板)
 
 目前完工情况：
@@ -25,12 +32,12 @@ Haohanyh-HAMOS-ProjectY是我们的一个LiGHTs计划中的部分，继ProjectX�
 
 * 护花使者Hardware区: 未来会做些C代码上面的优化，尝试尝试。
 * 护花使者HarmonyOS HAP区: 目前参考的是来自Gitee护花使者仓库上面的HAP，本人还未有HarmonyOS操作系统的手机，目前开发受阻。
-* 护花使者Android APP区：正在开发，同时会有教程。
+* 护花使者Android APP区：接下来就是优化了！
 * 护花使者资源区: 会做更新补充和修改，并且在接下来很长一段时间里，会有明显的对README变动。
 
 | 软件开发情况 | 完工程度 | 后续更新情况 |
 |:----|:----:|:----:|
-| Android APP | 67.5% | 剩余NFC对接开发板和浇花操作 |
+| Android APP | 95% | 优化代码为8月份的重点工作 |
 | HarmonyOS HAP | 0% | 准备开始，并且暑期与Android APP联动发展! |
 | Windows EXE | 0% | 计划中... |
 
@@ -39,7 +46,7 @@ Android APP对应版本号:
 | 版本号 | 对应开发版本号 | 发布日期 |
 |:----|:----:|:----:|
 | 1.0.18 | ⭐Aurora | 2022.07.19 |
-| ?.?.??? | ⛰️Basin | ????.??.?? |
+| 2.0.362 | ⛰️Basin | 2022.07.24 |
 | ?.?.??? | ☄️Comet | ????.??.?? |
 | ?.?.??? | 🏜️Desert | ????.??.?? |
 | ?.?.??? | 🌐Earth | ????.??.?? |

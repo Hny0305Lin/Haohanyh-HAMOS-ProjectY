@@ -10,8 +10,8 @@ android {
         minSdk 26
         targetSdk 32
         versionCode 1
-        //1.1.32，1.1版本第32次测试
-        versionName "1.1.32.2022.0720.Haohanyh.Aurora"
+        //2.0版本第362次测试
+        versionName "2.0.362.2022.0724.Haohanyh.Basin"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -31,7 +31,7 @@ android {
 dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation project(path: ':app:huawei')
