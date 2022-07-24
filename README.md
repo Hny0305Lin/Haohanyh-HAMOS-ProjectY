@@ -22,7 +22,7 @@ Haohanyh-HAMOS-ProjectY是我们的一个LiGHTs计划中的部分，继ProjectX�
 ``` Java
 public boolean HaohanyhOranMeCDNDecideData(...) throws JSONException {...}
 ```
-![Logo](https://dash.oran.me/assets/OranMe2020.jpg =350x350)
+![Logo](https://dash.oran.me/assets/OranMe2020.jpg)
 
 ### 智能浇花(BearPi小熊派智能农业E53(温湿度采集和LED转子控制) + 扩展板)
 
