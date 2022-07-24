@@ -18,11 +18,11 @@ Haohanyh-HAMOS-ProjectY是我们的一个LiGHTs计划中的部分，继ProjectX�
 >
 > 下载地址2: https://git.haohanyh.top:3001/Haohanyh/LICENSE
 
-# 感谢北京居若科技有限公司，对浩瀚银河ProjectY的项目支持和提供高防服务，保证关键函数判没有任何网络问题。
+# 感谢北京居若科技有限公司，对浩瀚银河ProjectY的项目支持和提供高防服务，保证关键函数判断无任何网络问题。
 ``` Java
-public boolean HaohanyhOranMeCDNDecideData(String Url, String S_data_device_id, String data_node_id, String data_product_id, String S_data_product_name) throws JSONException {...}
+public boolean HaohanyhOranMeCDNDecideData(...) throws JSONException {...}
 ```
-![Logo](https://dash.oran.me/assets/OranMe2020.jpg)
+![Logo](https://dash.oran.me/assets/OranMe2020.jpg =350x350)
 
 ### 智能浇花(BearPi小熊派智能农业E53(温湿度采集和LED转子控制) + 扩展板)
 
