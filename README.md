@@ -24,6 +24,8 @@ public boolean HaohanyhOranMeCDNDecideData(...) throws JSONException {...}
 ```
 ![Logo](https://dash.oran.me/assets/OranMe2020.jpg)
 
+欢迎使用居若科技提供的云服务解决方案，链接:[点我](https://dash.oran.me)
+
 ### 智能浇花(BearPi小熊派智能农业E53(温湿度采集和LED转子控制) + 扩展板)
 
 目前完工情况：
