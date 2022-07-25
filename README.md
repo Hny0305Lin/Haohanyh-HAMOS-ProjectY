@@ -1,5 +1,9 @@
 # Haohanyh-HAMOS-ProjectY
 Haohanyh-HAMOS-ProjectY是我们的一个LiGHTs计划中的部分，继ProjectX项目后的又一份，使用鸿蒙硬件的同时开源我们在hi3861上与物联网（智能浇花）上做的探索。
+目前LiGHTs计划已经有ProjectW1 ProjectW2 ProjectX ProjectY，丰富了Android、Windows、OpenHarmony多方向的物联网生态。
+# 7月25号，入驻华为云CodeHub
+从ProjectY 2.0.362开始，我们接下来的项目，都会进入华为云CodeHub进行任务分配、代码备份。
+[![Code Health](https://hn.devcloud.huaweicloud.com/api/codecheck/v1/codecheck/task/codehealth.svg?taskId=1a25beac64c9495d84df6d9bd85c67c6)](https://hn.devcloud.huaweicloud.com/api/codecheck/project/d8cbe7f927294228b3824ff5d6d2f538/codecheck/task/1a25beac64c9495d84df6d9bd85c67c6/detail)
 
 # 使用到的硬件 和 硬件重要资料
 ### Hi3861 BearPi小熊派 护花使者套装版
