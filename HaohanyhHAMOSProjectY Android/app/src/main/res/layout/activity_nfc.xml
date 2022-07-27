@@ -19,14 +19,14 @@
         android:layout_width="match_parent"
         android:layout_height="15dp" />
 
-    <Button
-        android:onClick="onClick"
-        android:id="@+id/bt_write_text"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:background="@drawable/label_customize_jianbian_03"
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:text="@string/haohanyh_hamos_lights_project_nfc"
-        android:textColor="@color/white" />
+        android:background="@color/Pink_is_fancy"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:gravity="center" />
 
 
 </LinearLayout>

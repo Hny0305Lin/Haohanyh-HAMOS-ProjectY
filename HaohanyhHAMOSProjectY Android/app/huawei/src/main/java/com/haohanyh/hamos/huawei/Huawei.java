@@ -282,6 +282,7 @@ public class Huawei {
      * ▍和中华人民共和国澳门特别行政区《网络安全法》
      * ▍(浩瀚银河旗下网站和等服务不会以任何形式收集敏感信息和大数据分析，并在遵守情况下最大限度公开用户上传数据）
      * 浩瀚银河数据保存地址:https://oranme-cdn.haohanyh.com/HAMOS/ProjectY/Device_info.json
+     * 浩瀚银河CDN图形界面地址:https://oranme-cdn.haohanyh.com/files.php?HAMOS/ProjectY#Device_info.json
      * 本函数无任何上传到浩瀚银河的任何操作，仅为JSON数据下载判断行为，可安全使用
      * 浩瀚银河服务器已能做到7x24不间断运行，不会影响大量用户生产环境。
      */
@@ -320,6 +321,7 @@ public class Huawei {
         If_data_node_id = jsonObj.getString("node_id");
         If_data_product_id = jsonObj.getString("product_id");
         If_S_data_product_name = jsonObj.getString("product_name");
+
         if((S_data_device_id.equals(If_S_data_device_id)) && (data_node_id.equals(If_data_node_id)) && (data_product_id.equals(If_data_product_id)) && (S_data_product_name.equals(If_S_data_product_name))){
             Log.v("浩瀚银河:","恭喜您，华为云IoTDA上面有您的设备");
             return true;

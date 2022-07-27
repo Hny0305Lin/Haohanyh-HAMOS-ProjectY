@@ -1,9 +1,8 @@
+/* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE */
 package com.haohanyh.hamos.projecty;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -20,50 +19,32 @@ public class BaseNFCActivity extends AppCompatActivity {
         nfcHelper = new NFCHelper(this);
     }
 
-
     @Override
     protected void onResume() {
         super.onResume();
         //判断设备是否支持NFC功能
-        if (nfcHelper.isSupportNFC()) {
+        if (nfcHelper.SupportNFC()) {
             //判断设备是否开启NFC功能
-            if (nfcHelper.isEnableNFC()) {
-                //注册FNC监听器
-                nfcHelper.registerNFC(this);
+            if (nfcHelper.EnableNFC()) {
+                //注册NFC监听器
+                nfcHelper.RegisterNFC(this);
             } else {
-                nfcHelper.showFNCSetting(this);
+                nfcHelper.GoToNFCSetting(this);
             }
         } else {
-            showToast("当前设备不支持NFC功能");
+            Toast.makeText(BaseNFCActivity.this,"当前设备不支持NFC功能",Toast.LENGTH_SHORT).show();
         }
     }
-
 
     @Override
     protected void onPause() {
         super.onPause();
-        nfcHelper.unRegisterNFC(this);
+        nfcHelper.UnRegisterNFC(this);
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        log("Action: " + intent.getAction());
-
     }
 
-    public void start(Class clazz) {
-        startActivity(new Intent(this, clazz));
-    }
-
-    public void showToast(String content) {
-        if (TextUtils.isEmpty(content))
-            return;
-        Toast.makeText(this, content, Toast.LENGTH_SHORT).show();
-
-    }
-
-    public void log(String content) {
-        Log.e(getClass().getSimpleName(), content);
-    }
 }

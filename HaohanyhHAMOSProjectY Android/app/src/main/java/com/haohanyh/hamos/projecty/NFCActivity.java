@@ -1,3 +1,4 @@
+/* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE */
 package com.haohanyh.hamos.projecty;
 
 import static com.haohanyh.hamos.projecty.MainActivity.getToBearPiJSON;
@@ -7,7 +8,6 @@ import static com.haohanyh.hamos.projecty.R.layout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.EditText;
 
 import androidx.annotation.Nullable;
@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import java.nio.charset.Charset;
 
 public class NFCActivity extends BaseNFCActivity {
+    //初始化两个变量，这个很重要，一个是我们打印目前的参数到GUI页面，一个是判断是否可写数据到小熊派
     public EditText NfcData;
     private boolean isWrite = false;
 
@@ -27,6 +28,11 @@ public class NFCActivity extends BaseNFCActivity {
         NfcData.post(new Runnable() {@Override public void run() { NfcData.setText(getToBearPiJSON());NfcData.setText(SSRJSON()); }});
     }
 
+    /*
+     * 这个很重要，如果用户填写的值组成JSON，没有满为4的倍数（如176，不是4的倍数）
+     * 那么这个函数就是在JSON最有花括号"}"前，添加相对应的空格而不影响JSON数据
+     * 已经经过多轮灰度测试，暂时没有问题
+     */
     private String SSRJSON() {
         Log.v("浩瀚银河:","目前JSON文本情况:"+NfcData.getText().toString()+","+"目前JSON在GB2312情况下字节数:"+NfcData.getText().toString().getBytes(Charset.forName("gb2312")).length);
         //正确（4的倍数），就按兵不动；反之（非4倍数），就添加空格。
@@ -40,18 +46,12 @@ public class NFCActivity extends BaseNFCActivity {
                 json = json + " ";
             }
             Log.e("浩瀚银河:","现在您可以点击写入按钮了");
+            isWrite = true;
             return json + "}";
         }
         Log.e("浩瀚银河:","现在您可以点击写入按钮了");
+        isWrite = true;
         return NfcData.getText().toString();
-    }
-
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.bt_write_text:
-                isWrite = true;
-                break;
-        }
     }
 
     @Override
