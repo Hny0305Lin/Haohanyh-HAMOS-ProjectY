@@ -1,6 +1,10 @@
 # Haohanyh-HAMOS-ProjectY
 Haohanyh-HAMOS-ProjectY是我们的一个LiGHTs计划中的部分，继ProjectX项目后的又一份，使用鸿蒙硬件的同时开源我们在hi3861上与物联网（智能浇花）上做的探索。
 目前LiGHTs计划已经有ProjectW1 ProjectW2 ProjectX ProjectY，丰富了Android、Windows、OpenHarmony多方向的物联网生态。
+北京时间2022年7月28日16点20分，我们收到了OSCS开源安全社区的邮件通知，我们的项目自动收录了进去且得到了他们的安全检测结果！
+报告地址:[点我进去看看吧~](https://www.oscs1024.com/cd/1551438230239383552?sign=ce9f16ff)
+
+![https://www.oscs1024.com/platform/badge/Hny0305Lin/Haohanyh-HAMOS-ProjectY.svg](https://www.oscs1024.com/platform/badge/Hny0305Lin/Haohanyh-HAMOS-ProjectY.svg)
 
 ![IMG.SHIELD.IO](https://img.shields.io/badge/Haohanyh%20HAMOS%20ProjectY%20-Alpha.2.1.8.2022.0728.Haohanyh.Comet-gray.svg?colorA=007FFC&colorB=4DDDFC&style=for-the-badge)
 
