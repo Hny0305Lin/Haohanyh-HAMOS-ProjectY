@@ -5,6 +5,9 @@ Haohanyh-HAMOS-ProjectY是我们的一个LiGHTs计划中的部分，继ProjectX�
 目前情况:
 
 主版本：![IMG.SHIELD.IO](https://img.shields.io/badge/Haohanyh%20HAMOS%20ProjectY%20-Alpha.2.1.8.2022.0728.Haohanyh.Comet-gray.svg?colorA=007FFC&colorB=4DDDFC&style=for-the-badge)
+![IMG.SHIELD.IO](https://img.shields.io/badge/%E5%85%B7%E4%BD%93%E7%89%88%E6%9C%AC-Alpha.2.1.0-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
+![IMG.SHIELD.IO](https://img.shields.io/badge/%E6%B5%8B%E8%AF%95%E6%AC%A1%E6%95%B0-8-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
+![IMG.SHIELD.IO](https://img.shields.io/badge/%E5%BC%80%E5%8F%91%E4%BB%A3%E5%8F%B7-COMET-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
 
 华为函数版本：![IMG.SHIELD.IO](https://img.shields.io/badge/Haohanyh%20HAMOS%20ProjectY%20%E5%8D%8E%E4%B8%BA%E5%87%BD%E6%95%B0%20-1.3-gray.svg?colorA=007FFC&colorB=4DDDFC&style=for-the-badge)
 
