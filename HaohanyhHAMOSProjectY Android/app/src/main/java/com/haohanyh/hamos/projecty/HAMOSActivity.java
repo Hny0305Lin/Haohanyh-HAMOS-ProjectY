@@ -88,7 +88,6 @@ public class HAMOSActivity extends Activity {
      * HuHuaStart()为护花进程开启
      */
     private void HuHuaStart(){
-        Log.i( "Action!" , "护花进程，开启！" );
         huhua = new HuhuaThread();
         huhua.start();
     }
@@ -113,7 +112,7 @@ public class HAMOSActivity extends Activity {
             try {
                 JSONObject jsonObj = new JSONObject(result);
                 JSONArray jsonArray = jsonObj.getJSONArray("shadow");
-                System.out.println("浩瀚银河函数:shadow=====" + jsonArray);
+                Log.i("浩瀚银河:","护花使者shadow全值 " + jsonArray);
                 for(int i = 0;i < jsonArray.length(); i++){
                     //第一层，reported，我们要的是后面的json，没事，我们慢慢转
                     JSONObject obj = jsonArray.getJSONObject(i);
@@ -168,7 +167,6 @@ public class HAMOSActivity extends Activity {
      * WaterStart()为护花进程开启后，启动的智能判断临界值情况，里面的算法其实很简单，就是触发到时设备浇花。
      */
     private void WaterStart(){
-        Log.i( "Action!" , "浇花进程，开启！" );
         water = new WaterControlThread();
         water.start();
     }

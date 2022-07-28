@@ -3,6 +3,7 @@
 
     <string name="haohanyh_hamos_lights_project">Haohanyh HAMOS：LiGHTs Project</string>
     <string name="haohanyh_hamos_lights_project_manymain1">护花使者 Android版</string>
+    <string name="haohanyh_hamos_lights_project_manymain2">护花使者 NFC页面</string>
     <string name="haohanyh_hamos_lights_project_jiaohua">点我浇花</string>
     <string name="haohanyh_hamos_lights_project_nfc">NFC NDEF数据写入\n 请直接靠近小熊派NFC \n 2.0.1.370版本已彻底解决自动化</string>
 </resources>

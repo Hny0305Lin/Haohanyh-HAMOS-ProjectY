@@ -37,19 +37,19 @@ public class NFCActivity extends BaseNFCActivity {
         Log.v("浩瀚银河:","目前JSON文本情况:"+NfcData.getText().toString()+","+"目前JSON在GB2312情况下字节数:"+NfcData.getText().toString().getBytes(Charset.forName("gb2312")).length);
         //正确（4的倍数），就按兵不动；反之（非4倍数），就添加空格。
         if (NfcData.getText().toString().getBytes(Charset.forName("gb2312")).length % 4 != 0) {
-            Log.e("浩瀚银河:","您写入的数据字节数不为4的倍数，请稍等");
+            Log.d("浩瀚银河:","您写入的数据字节数不为4的倍数，请稍等");
             int i = NfcData.getText().toString().getBytes(Charset.forName("gb2312")).length % 4;
-            Log.e("浩瀚银河:","即将为您补充"+i+"个空格在json数据里");
+            Log.d("浩瀚银河:","即将为您补充"+i+"个空格在json数据里");
             String json = NfcData.getText().toString().substring(0, NfcData.getText().toString().length() - 1);
             for(int j = 0; j == i; j++){
-                Log.e("浩瀚银河:","已经添加了"+j+"个空格");
+                Log.d("浩瀚银河:","已经添加了"+j+"个空格");
                 json = json + " ";
             }
-            Log.e("浩瀚银河:","现在您可以点击写入按钮了");
+            Log.d("浩瀚银河:","现在您可以点击写入按钮了");
             isWrite = true;
             return json + "}";
         }
-        Log.e("浩瀚银河:","现在您可以点击写入按钮了");
+        Log.d("浩瀚银河:","现在您可以点击写入按钮了");
         isWrite = true;
         return NfcData.getText().toString();
     }
@@ -61,7 +61,7 @@ public class NFCActivity extends BaseNFCActivity {
             String text = NfcData.getText().toString();
             boolean ret = nfcHelper.writeNFC_NDEF(intent, text);
             nfcHelper.vibrate(this);
-            Log.e("浩瀚银河:",ret ? "数据写入成功" : "数据写入失败");
+            Log.v("浩瀚银河:",ret ? "数据写入成功" : "数据写入失败");
             if(ret){ Intent i = new Intent(NFCActivity.this,HAMOSActivity.class);startActivity(i); }
             isWrite = false;
         }

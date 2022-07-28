@@ -1,6 +1,8 @@
 /* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE */
 package com.haohanyh.hamos.huawei;
 
+import static com.haohanyh.hamos.dataI.Data.GetData;
+
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -35,9 +37,9 @@ public class Huawei {
     protected String S_data_product_name = "";
     //需要添加的IAM账号名、账号密码。想要获取IAM信息？点它即可→https://support.huaweicloud.com/api-iam/iam_17_0002.html
     //这三个，请手动填写！！！！！！！！！！！！！！！！！！！！！！
-    protected final String JsonDomainName = "";
-    protected final String JsonName = "";
-    protected final String JsonPassword = "";
+    protected final String JsonDomainName = GetData().getJsonDomainName();
+    protected final String JsonName = GetData().getJsonName();
+    protected final String JsonPassword = GetData().getJsonPassword();
     //保存的设备信息，不要填写！！！！！！！！
     private String Device_info = "";
     private String Device_secret = "";

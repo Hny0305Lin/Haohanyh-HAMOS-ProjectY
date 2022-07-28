@@ -5,6 +5,26 @@
     android:orientation="vertical"
     android:background="@drawable/fuzhou1">
 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/haohanyh_hamos_lights_project"
+        android:background="@color/Pink_is_fancy"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:gravity="bottom|left" />
+
+    <TextView
+        android:background="@color/Pink_is_fancy"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="@string/haohanyh_hamos_lights_project_manymain2"
+        android:textColor="@color/black"
+        android:textSize="18sp">
+    </TextView>
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="30dp" />

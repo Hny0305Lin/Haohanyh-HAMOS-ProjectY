@@ -10,8 +10,8 @@ android {
         minSdk 26
         targetSdk 32
         versionCode 1
-        //2.0.1版本第370次测试
-        versionName "2.0.1.370.2022.0724.Haohanyh.Basin"
+        //灰度测试偷跑2.1版本第8次测试
+        versionName "Alpha.2.1.8.2022.0728.Haohanyh.Comet"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

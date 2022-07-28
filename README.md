@@ -1,6 +1,11 @@
 # Haohanyh-HAMOS-ProjectY
 Haohanyh-HAMOS-ProjectY是我们的一个LiGHTs计划中的部分，继ProjectX项目后的又一份，使用鸿蒙硬件的同时开源我们在hi3861上与物联网（智能浇花）上做的探索。
 目前LiGHTs计划已经有ProjectW1 ProjectW2 ProjectX ProjectY，丰富了Android、Windows、OpenHarmony多方向的物联网生态。
+
+目前情况:
+主版本：![IMG.SHIELD.IO](https://img.shields.io/badge/Haohanyh%20HAMOS%20ProjectY%20-Alpha.2.1.8.2022.0728.Haohanyh.Comet-gray.svg?colorA=007FFC&colorB=4DDDFC&style=for-the-badge)
+华为函数版本：![IMG.SHIELD.IO](https://img.shields.io/badge/Haohanyh%20HAMOS%20ProjectY%20%E5%8D%8E%E4%B8%BA%E5%87%BD%E6%95%B0%20-1.3-gray.svg?colorA=007FFC&colorB=4DDDFC&style=for-the-badge)
+
 # 7月25号，入驻华为云CodeHub
 从ProjectY 2.0.362开始，我们接下来的项目，都会进入华为云CodeHub进行任务分配、代码备份。
 [![Code Health](https://hn.devcloud.huaweicloud.com/api/codecheck/v1/codecheck/task/codehealth.svg?taskId=1a25beac64c9495d84df6d9bd85c67c6)](https://hn.devcloud.huaweicloud.com/api/codecheck/project/d8cbe7f927294228b3824ff5d6d2f538/codecheck/task/1a25beac64c9495d84df6d9bd85c67c6/detail)

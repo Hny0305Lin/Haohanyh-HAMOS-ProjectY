@@ -1,16 +1,16 @@
 /* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE */
 package com.haohanyh.hamos.projecty;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
-import utils.NFCHelper;
+import com.haohanyh.hamos.nfc.NFCHelper;
 
-public class BaseNFCActivity extends AppCompatActivity {
+public class BaseNFCActivity extends Activity {
     protected NFCHelper nfcHelper;
 
     @Override

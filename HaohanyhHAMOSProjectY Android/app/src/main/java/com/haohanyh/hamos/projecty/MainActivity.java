@@ -1,6 +1,7 @@
 /* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE */
 package com.haohanyh.hamos.projecty;
 
+import static com.haohanyh.hamos.dataII.Data.GetData;
 import static com.haohanyh.hamos.huawei.Huawei.GetHuawei;
 import static com.haohanyh.hamos.projecty.R.layout;
 
@@ -22,8 +23,8 @@ public class MainActivity extends Activity {
     private String Device_info = "";
     private String Device_secret = "";
     private String Product_name = "";
-    private String WPA_address = "";
-    private String WPA_pwd = "";
+    private String WPA_address = GetData().getWPA_address();
+    private String WPA_pwd = GetData().getWPA_pwd();
     //通过NFC传给小熊派的JSON!
     private static String ToBearPiJSON = "";
     public static String getToBearPiJSON() { return ToBearPiJSON; }
