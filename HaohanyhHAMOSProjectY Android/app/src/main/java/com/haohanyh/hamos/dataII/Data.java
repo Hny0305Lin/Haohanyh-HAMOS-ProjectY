@@ -7,12 +7,12 @@ public class Data {
     private final String WPA_address = "";
     private final String WPA_pwd = "";
 
-    //重构，让其他类获取Data类的数据
-    public String getWPA_address() { return WPA_address; }
-    public String getWPA_pwd() { return WPA_pwd; }
-
     //下面老三样了，建议是不要动
     protected Data() { }
     public static Data GetData() { return data.shuju; }
     protected static class data { private static final Data shuju = new Data(); }
+
+    //2.1更新，重写构造函数
+    public String getWPA_pwd() { return WPA_pwd; }
+    public String getWPA_address() { return WPA_address; }
 }

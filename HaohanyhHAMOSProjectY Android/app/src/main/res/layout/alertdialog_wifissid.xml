@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="220dp"
+    android:layout_height="150dp">
+
+    <EditText
+        android:id="@+id/WPA_SSID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/wpassid"
+        android:inputType="textAutoCorrect"
+        android:textColor="@color/white"
+        android:textColorHint="@color/blue_biaozhun"
+        android:textCursorDrawable="@drawable/cursor_customize"/>
+
+</TableLayout>

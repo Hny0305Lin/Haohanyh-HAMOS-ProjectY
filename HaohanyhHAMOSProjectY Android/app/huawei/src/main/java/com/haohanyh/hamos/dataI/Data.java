@@ -2,9 +2,9 @@ package com.haohanyh.hamos.dataI;
 
 public class Data {
     //华为云IAM账号
-    private final String JsonDomainName = "";
-    private final String JsonName = "";
-    private final String JsonPassword = "";
+    private static final String JsonDomainName = "";
+    private static final String JsonName = "";
+    private static final String JsonPassword = "";
     //重构，让其他类获取Data类的数据
     public String getJsonDomainName() { return JsonDomainName; }
     public String getJsonName() { return JsonName; }

@@ -10,8 +10,6 @@ android {
         minSdk 26
         targetSdk 32
         versionCode 1
-        //灰度测试偷跑2.1版本第8次测试
-        versionName "Alpha.2.1.8.2022.0728.Haohanyh.Comet"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -32,7 +30,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 
     implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation project(path: ':app:huawei')
     testImplementation 'junit:junit:4.+'

@@ -24,11 +24,11 @@
     <style name="Theme.HAMOS.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="EditScreenTextInputLayoutStyle" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorControlNormal">@color/textInputLayout</item>
-        <item name="colorControlActivated">@color/textInputLayout</item>
-        <item name="colorControlHighlight">@color/textInputLayout</item>
-        <item name="colorAccent">@color/textInputLayout</item>
-        <item name="android:textColorHint">@color/textInputLayout</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/black</item>
+        <item name="colorControlHighlight">@color/black</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
     </style>
 
     <style name="haohanyh">

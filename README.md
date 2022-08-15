@@ -7,11 +7,11 @@ Haohanyh-HAMOS-ProjectY是我们的一个LiGHTs计划中的部分，继ProjectX�
 
 [![OSCS Status](https://www.oscs1024.com/platform/badge/Hny0305Lin/Haohanyh-HAMOS-ProjectY.svg?size=large)](https://www.oscs1024.com/project/Hny0305Lin/Haohanyh-HAMOS-ProjectY?ref=badge_large)
 
-![IMG.SHIELD.IO](https://img.shields.io/badge/Haohanyh%20HAMOS%20ProjectY%20-Alpha.2.1.8.2022.0728.Haohanyh.Comet-gray.svg?colorA=007FFC&colorB=4DDDFC&style=for-the-badge)
+![IMG.SHIELD.IO](https://img.shields.io/badge/Haohanyh%20HAMOS%20ProjectY%20-Release.2.2.284.2022.0814.Haohanyh.Comet-gray.svg?colorA=007FFC&colorB=4DDDFC&style=for-the-badge)
 
-![IMG.SHIELD.IO](https://img.shields.io/badge/%E5%85%B7%E4%BD%93%E7%89%88%E6%9C%AC-Alpha.2.1.0-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
+![IMG.SHIELD.IO](https://img.shields.io/badge/%E5%85%B7%E4%BD%93%E7%89%88%E6%9C%AC-Release.2.2.0-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
 
-![IMG.SHIELD.IO](https://img.shields.io/badge/%E6%B5%8B%E8%AF%95%E6%AC%A1%E6%95%B0-8-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
+![IMG.SHIELD.IO](https://img.shields.io/badge/%E6%B5%8B%E8%AF%95%E6%AC%A1%E6%95%B0-284-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
 
 ![IMG.SHIELD.IO](https://img.shields.io/badge/%E5%BC%80%E5%8F%91%E4%BB%A3%E5%8F%B7-COMET-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
 
@@ -69,7 +69,7 @@ Android APP对应版本号:
 |:----|:----:|:----:|
 | 1.0.18 | ⭐Aurora | 2022.07.19 |
 | 2.0.362 | ⛰️Basin | 2022.07.24 |
-| ?.?.??? | ☄️Comet | ????.??.?? |
+| 2.2.284 | ☄️Comet | 2022.08.15 |
 | ?.?.??? | 🏜️Desert | ????.??.?? |
 | ?.?.??? | 🌐Earth | ????.??.?? |
 | ...... | ...... | ...... |

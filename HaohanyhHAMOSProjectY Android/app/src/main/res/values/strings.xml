@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">HAMOS Project:Y</string>
-
+    <string name="app_version">Release.2.2.284.2022.0814.Haohanyh.Comet</string>
+    <!-- 灰度测试偷跑2.1版本第54次测试-->
     <string name="haohanyh_hamos_lights_project">Haohanyh HAMOS：LiGHTs Project</string>
     <string name="haohanyh_hamos_lights_project_manymain1">护花使者 Android版</string>
     <string name="haohanyh_hamos_lights_project_manymain2">护花使者 NFC页面</string>
     <string name="haohanyh_hamos_lights_project_jiaohua">点我浇花</string>
     <string name="haohanyh_hamos_lights_project_nfc">NFC NDEF数据写入\n 请直接靠近小熊派NFC \n 2.0.1.370版本已彻底解决自动化</string>
+    <string name="iam3">请输入华为IAM密码</string>
+    <string name="iam2">请输入华为IAM账号</string>
+    <string name="iam1">请输入华为IAM用户名</string>
+    <string name="wpassid">请输入Wi-Fi名称</string>
+    <string name="wpasecret">请输入此Wi-Fi密码</string>
+    <string name="firstwarning">我们建议您在使用前，准备好以下操作：\n开启您手机的NFC功能、开通您华为云IAM账号和IoTDA设备接入功能，这非常重要!!!\n选择“正常启动”，请在选择前，开启您手机的GPS功能，这非常重要!!!\n由于Android9.0以上设备，必须开启定位才能读取Wi-Fi名称，我们不得不这么做。\n\nProjectY获取定位权限用于获取Wi-Fi名称。\nProjectY获取网络权限用于华为云沟通。\nProjectY获取NFC权限用于护花使者数据写入。\nProjectY获取震动权限用于NFC功能。\n\n浩瀚银河HAMOS ProjectY为ProjectX分支计划，有前者ProjectX的经验使得我们可以开发于小熊派护花使者，提供更强大的功能。\n\n快速启动为代码层面赋值数据后，可选择的选项。\n快速启动将在2.4迎来重大更新，敬请期待。\n正常启动则需要手动在软件内填写，否则会有空值报错。\n正常启动正在灰度测试中，敬请期待正式版。\n▍以下↓为浩瀚银河各平台和软件规定，同时该软件遵守浩瀚银河计算机软件源代码开放协议。\n▍浩瀚银河旗下网站和等服务，均严格遵守《中华人民共和国网络安全法》《深圳经济特区数据条例》《中华人民共和国香港特别行政区维护国家安全法》和中华人民共和国澳门特别行政区《网络安全法》\n▍(浩瀚银河旗下网站和等服务不会以任何形式收集敏感信息和大数据分析，并在遵守情况下最大限度公开用户上传数据）\n</string>
 </resources>

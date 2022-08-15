@@ -5,6 +5,8 @@ import static com.haohanyh.hamos.dataI.Data.GetData;
 
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -104,8 +106,8 @@ public class Huawei {
     /*
      * 创建JSON转String，方便ControlSenderneedpost()函数(CreateCommand 下发设备命令)，进行使用和理解。
      */
-    public void CreateJsonToControlSenderneedpost(String project_id,String device_id,String service_id,String command_name,String command_param,String command_value) {
-        String jsonParas = "";
+    public void CreateJsonToControlSenderneedpost(String service_id,String command_name,String command_param,String command_value) {
+        String jsonParas;
         JSONObject object = new JSONObject();
         try {
             JSONObject jsonObject = new JSONObject();
@@ -114,7 +116,7 @@ public class Huawei {
             object.put(command_param, command_value);
             jsonObject.put("paras", object);
             jsonParas = jsonObject.toString();
-            ControlSenderneedpost(jsonParas,project_id,device_id);
+            ControlSenderneedpost(jsonParas);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -342,24 +344,26 @@ public class Huawei {
      * 护花使者：采用E53-IA1，MotorStatus
      * 小熊派：（E53-IA1 MotorStatus、LightStatus）（E53-ST1 BeepStatus）（E53_SC1 LightStatus）
      */
-    public void ControlSenderneedpost(String json,String project_id,String device_id) {
+    public void ControlSenderneedpost(String json) {
+        Knowtokenneedpost();
+        String url = "https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + GetHuawei().getProject_id() + "/devices/" + GetHuawei().getDevice_info() + "/commands";
         RequestBody body = RequestBody.create(MediaType.parse("application/json;charset=utf-8"), json);
         Request request = new Request.Builder()
-                .url("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + project_id + "/devices/" + device_id + "/commands")
+                .url(url)
                 .addHeader("X-Auth-Token",HUAWEITOKEN)
                 .post(body)
                 .build();
-
         OkHttpClient mOkHttpClient = new OkHttpClient();
         mOkHttpClient.newCall(request).enqueue(new Callback() {
             @Override
-            public void onFailure(Call call, IOException e) {
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
                 Log.e("ControlSenderneedpost,Failed",e.getLocalizedMessage() + "，失败");
             }
 
             @Override
-            public void onResponse(Call call, Response response) throws IOException {
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 Log.i("ControlSenderneedpost,Finished","函数链接: " + Objects.requireNonNull(response.body()).string());
+                Log.v("浩瀚银河:", "真正浇花中!");
             }
         });
     }
@@ -424,12 +428,12 @@ public class Huawei {
         OkHttpClient mOkHttpClient = new OkHttpClient();
         mOkHttpClient.newCall(request).enqueue(new Callback() {
             @Override
-            public void onFailure(Call call, IOException e) {
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
                 Log.e("ResetSecretneedpost,Failed",e.getLocalizedMessage() + "，失败");
             }
 
             @Override
-            public void onResponse(Call call, Response response) throws IOException {
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 if(response.code() == 200){
                     //反正每次都是200，索性不看Log了
                     //Log.i("OK","code=200,才算成功");

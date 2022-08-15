@@ -62,8 +62,8 @@ public class NFCActivity extends BaseNFCActivity {
             boolean ret = nfcHelper.writeNFC_NDEF(intent, text);
             nfcHelper.vibrate(this);
             Log.v("浩瀚银河:",ret ? "数据写入成功" : "数据写入失败");
-            if(ret){ Intent i = new Intent(NFCActivity.this,HAMOSActivity.class);startActivity(i); }
             isWrite = false;
+            if(ret){ Intent i = new Intent(NFCActivity.this,HAMOSActivity.class);startActivity(i);finish(); }
         }
     }
 }

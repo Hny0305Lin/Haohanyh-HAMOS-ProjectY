@@ -95,7 +95,7 @@ public class NFCHelper {
         if (alertDialog == null) {
             Log.v("浩瀚银河:", "弹窗提醒前往设置NFC: " + "成功");
             alertDialog = new AlertDialog.Builder(context)
-                    .setTitle("Haohanyh-ProjectY-NFC")
+                    .setTitle("Haohanyh HAMOS ProjectY，需要NFC功能")
                     .setMessage("当前应用需要您开启NFC,是否立即去设置界面开启?")
                     .setPositiveButton("去设置", new DialogInterface.OnClickListener() {
                         @SuppressLint("ObsoleteSdkInt")

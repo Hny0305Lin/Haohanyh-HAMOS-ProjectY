@@ -158,6 +158,7 @@
                     android:background="@drawable/label_customize_jianbian_03"
                     android:text="@string/haohanyh_hamos_lights_project_jiaohua"
                     android:textColor="@color/white"
+                    android:stateListAnimator="@null"
                     android:textSize="14sp" />
 
             </LinearLayout>

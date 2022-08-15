@@ -35,9 +35,6 @@ public class HAMOSActivity extends Activity {
     //进程类，继承父类Threads
     public HuhuaThread huhua;
     public WaterControlThread water;
-    //2.0版本，我们在彻底摆脱部分数据填写，这三个项目ID硬件ID什么的，慢慢的我们可以不用手动填写了。
-    private String project_id = GetHuawei().getProject_id();
-    private String device_id = GetHuawei().getDevice_info();
     //服务ID、命令名字、命令服务名、命令属性（也就是上报值），后面的链接是在线调试，可以帮助你得到这些变量。
     //（配置好你的板子的过程，也配置了这些，如果忘记了但不想重新创建设备，就这么找吧）
     //https://console.huaweicloud.com/iotdm/?region=cn-north-4#/dm-portal/monitor/online-debugger
@@ -57,15 +54,15 @@ public class HAMOSActivity extends Activity {
         setContentView(R.layout.activity_main);
         Init();
         Toast.makeText(HAMOSActivity.this,"您现在可以关闭NFC且重启小熊派开发板了",Toast.LENGTH_SHORT).show();
+
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
                 count++;
                 Log.v("浩瀚银河HAMOS运行计时:", String.valueOf(count));
                 if(count == 3)                                       { Log.v("浩瀚银河:", "护花使者即将开始采集数据"); }
-                if(count >= 4)                                       { HuHuaStart(); }
-                if(count >= 5)                                       { WaterStart(); }
-                if(count >= 6)                                       { Log.v("浩瀚银河:", "护花使者，正式开始！"); }
+                if(count >= 4)                                       { WaterStart(); }
+                if(count >= 12 && count % 3 == 2)       { HuHuaStart(); }
             }
         };
         newtimer.schedule(task,300,1000);
@@ -101,7 +98,7 @@ public class HAMOSActivity extends Activity {
          * 自动跑，不用理它，我基本上帮你们写好了这些了。
          */
         public void run() {
-            String result = GetHuawei().Knowdeviceneedget("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + project_id + "/devices/" + device_id + "/shadow");
+            String result = GetHuawei().Knowdeviceneedget("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + GetHuawei().getProject_id() + "/devices/" + GetHuawei().getDevice_info() + "/shadow");
             //我们把从华为云，通过get函数查询到的设备数据，做数据显示和浇花控制。
             DataChangeShow(result);
         }
@@ -184,7 +181,6 @@ public class HAMOSActivity extends Activity {
                     command_value = "ON";
                     Toast.makeText(HAMOSActivity.this, "浇花中", Toast.LENGTH_SHORT).show();
                     WaterSomeFlower();
-                    Toast.makeText(HAMOSActivity.this, "浇花完成", Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -194,7 +190,10 @@ public class HAMOSActivity extends Activity {
          */
         private void WaterSomeFlower() {
             //请保证6个东西你都填写了再执行该函数~
-            GetHuawei().CreateJsonToControlSenderneedpost(project_id,device_id,service_id,command_name,command_param,command_value);
+            GetHuawei().CreateJsonToControlSenderneedpost(service_id,command_name,command_param,command_value);
+            Log.v("浩瀚银河:", "浇花中!");
         }
     }
+
+
 }
