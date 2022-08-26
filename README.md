@@ -17,7 +17,7 @@ Haohanyh-HAMOS-ProjectY是我们的一个LiGHTs计划中的部分，继ProjectX�
 
 ![IMG.SHIELD.IO](https://img.shields.io/badge/Haohanyh%20HAMOS%20ProjectY%20%E5%8D%8E%E4%B8%BA%E5%87%BD%E6%95%B0%20-1.3-gray.svg?colorA=007FFC&colorB=4DDDFC&style=for-the-badge)
 
-    # 使用到的硬件 和 硬件重要资料
+# 使用到的硬件 和 硬件重要资料
 ### Hi3861 BearPi小熊派 护花使者套装版
 > 购买地址:[tb](https://item.taobao.com/item.htm?ft=t&id=645216486457)
 > 芯片资料:[点我下载](https://gitee.com/bearpi/bearpi-hm_nano/raw/master/applications/BearPi/BearPi-HM_Nano/docs/board/BearPi_HM%20Nano%20%E8%8A%AF%E7%89%87%E6%89%8B%E5%86%8C.pdf)
