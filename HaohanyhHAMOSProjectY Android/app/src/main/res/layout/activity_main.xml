@@ -157,7 +157,35 @@
                     android:layout_height="50sp"
                     android:background="@drawable/label_customize_jianbian_03"
                     android:text="@string/haohanyh_hamos_lights_project_jiaohua"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
+                    android:stateListAnimator="@null"
+                    android:textSize="14sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <Button
+                    android:id="@+id/CtrlS"
+                    android:layout_width="300dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/label_customize_jianbian_03"
+                    android:text="@string/haohanyh_hamos_lights_project_CtrlS"
+                    android:textColor="@color/black"
+                    android:stateListAnimator="@null"
+                    android:textSize="14sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <Button
+                    android:id="@+id/CtrlS2"
+                    android:layout_width="300dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/label_customize_jianbian_03"
+                    android:text="@string/haohanyh_hamos_lights_project_CtrlS2"
+                    android:textColor="@color/black"
                     android:stateListAnimator="@null"
                     android:textSize="14sp" />
 

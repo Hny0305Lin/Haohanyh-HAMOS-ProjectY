@@ -2,6 +2,8 @@
 package com.haohanyh.hamos.projecty;
 
 import static com.haohanyh.hamos.huawei.Huawei.GetHuawei;
+import static com.haohanyh.hamos.projecty.R.drawable;
+import static com.haohanyh.hamos.projecty.R.id;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -15,6 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+
+import com.haohanyh.hamos.managedata.SaveHuaweiData;
+import com.haohanyh.hamos.managedata.SaveWLANData;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,10 +36,11 @@ public class HAMOSActivity extends Activity {
     public TextView TxtTemp;
     public TextView TxtHumi;
     public TextView TxtSoil;
-    public Button Btn;
+    public Button Btn, BtnCtrlS, BtnCtrlS2;
     //进程类，继承父类Threads
     public HuhuaThread huhua;
     public WaterControlThread water;
+    public SaveThread saveinformation;
     //服务ID、命令名字、命令服务名、命令属性（也就是上报值），后面的链接是在线调试，可以帮助你得到这些变量。
     //（配置好你的板子的过程，也配置了这些，如果忘记了但不想重新创建设备，就这么找吧）
     //https://console.huaweicloud.com/iotdm/?region=cn-north-4#/dm-portal/monitor/online-debugger
@@ -62,7 +68,7 @@ public class HAMOSActivity extends Activity {
                 Log.v("浩瀚银河HAMOS运行计时:", String.valueOf(count));
                 if(count == 3)                                       { Log.v("浩瀚银河:", "护花使者即将开始采集数据"); }
                 if(count >= 4)                                       { WaterStart(); }
-                if(count >= 12 && count % 3 == 2)       { HuHuaStart(); }
+                if(count >= 12 && count % 3 == 2)       { HuHuaStart();SaveStart(); }
             }
         };
         newtimer.schedule(task,300,1000);
@@ -72,13 +78,15 @@ public class HAMOSActivity extends Activity {
      * Init()为初始化各类元素
      */
     private void Init() {
-        ImageTemp = findViewById(R.id.IItemp);
-        ImageHumi = findViewById(R.id.IIHumi);
-        ImageSoil = findViewById(R.id.IISoil);
-        TxtTemp = findViewById(R.id.txtwendu);
-        TxtHumi = findViewById(R.id.txtshidu);
-        TxtSoil = findViewById(R.id.txtsoil);
-        Btn = findViewById(R.id.kaiqi);
+        ImageTemp = findViewById(id.IItemp);
+        ImageHumi = findViewById(id.IIHumi);
+        ImageSoil = findViewById(id.IISoil);
+        TxtTemp = findViewById(id.txtwendu);
+        TxtHumi = findViewById(id.txtshidu);
+        TxtSoil = findViewById(id.txtsoil);
+        Btn = findViewById(id.kaiqi);
+        BtnCtrlS = findViewById(id.CtrlS);//2.2保存设备信息，可下一次使用快速启动
+        BtnCtrlS2 = findViewById(id.CtrlS2);//同上
     }
 
     /*
@@ -137,19 +145,19 @@ public class HAMOSActivity extends Activity {
                             int Soil = Integer.parseInt(SoilResult);
                             //临界值：温度大于30小于20；湿度大于70小于40；土壤湿度大于44小于17
                             if(Temp < 20 || Temp > 30) {
-                                ImageTemp.setImageResource(R.drawable.temp_warn);
+                                ImageTemp.setImageResource(drawable.temp_warn);
                             } else {
-                                ImageTemp.setImageResource(R.drawable.temp);
+                                ImageTemp.setImageResource(drawable.temp);
                             }
                             if(Humi < 40 || Humi > 70) {
-                                ImageHumi.setImageResource(R.drawable.humi_warn);
+                                ImageHumi.setImageResource(drawable.humi_warn);
                             } else {
-                                ImageHumi.setImageResource(R.drawable.humi);
+                                ImageHumi.setImageResource(drawable.humi);
                             }
                             if(Soil < 17 || Soil > 44) {
-                                ImageSoil.setImageResource(R.drawable.soil_warn);
+                                ImageSoil.setImageResource(drawable.soil_warn);
                             } else {
-                                ImageSoil.setImageResource(R.drawable.soil);
+                                ImageSoil.setImageResource(drawable.soil);
                             }
                         }
                     });
@@ -195,5 +203,41 @@ public class HAMOSActivity extends Activity {
         }
     }
 
+    /*
+     * SaveStart()为护花进程开启后，可以让用户点击按钮，保存填写过的设备信息，让下一次可以直接使用快速启动。
+     */
+    private void SaveStart(){
+        saveinformation = new SaveThread();
+        saveinformation.start();
+    }
 
+    /*
+     * Save进程类
+     * 触发时，保存华为账号信息和护花使者链接Wi-Fi信息。
+     */
+    private class SaveThread extends Thread {
+        @Override
+        public void run() {
+            BtnCtrlS.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //存IAM
+                    boolean aBoolean = SaveHuaweiData.GetSaveData().WriteFile();
+                    if(aBoolean) {
+                        Toast.makeText(HAMOSActivity.this,getApplicationContext().getFilesDir().getAbsolutePath() + "/HAMOSData/User.json",Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+            BtnCtrlS2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //存WLAN
+                    boolean bBoolean = SaveWLANData.GetSaveData().WriteFile();
+                    if(bBoolean) {
+                        Toast.makeText(HAMOSActivity.this,getApplicationContext().getFilesDir().getAbsolutePath() + "/HAMOSData/Wlan.json",Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
+    }
 }

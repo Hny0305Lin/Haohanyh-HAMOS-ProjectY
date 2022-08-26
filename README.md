@@ -7,21 +7,17 @@ Haohanyh-HAMOS-ProjectY是我们的一个LiGHTs计划中的部分，继ProjectX�
 
 [![OSCS Status](https://www.oscs1024.com/platform/badge/Hny0305Lin/Haohanyh-HAMOS-ProjectY.svg?size=large)](https://www.oscs1024.com/project/Hny0305Lin/Haohanyh-HAMOS-ProjectY?ref=badge_large)
 
-![IMG.SHIELD.IO](https://img.shields.io/badge/Haohanyh%20HAMOS%20ProjectY%20-Release.2.2.284.2022.0814.Haohanyh.Comet-gray.svg?colorA=007FFC&colorB=4DDDFC&style=for-the-badge)
+![IMG.SHIELD.IO](https://img.shields.io/badge/Haohanyh%20HAMOS%20ProjectY%20-Release.2.2.419.2022.0826.Haohanyh.Comet-gray.svg?colorA=007FFC&colorB=4DDDFC&style=for-the-badge)
 
 ![IMG.SHIELD.IO](https://img.shields.io/badge/%E5%85%B7%E4%BD%93%E7%89%88%E6%9C%AC-Release.2.2.0-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
 
-![IMG.SHIELD.IO](https://img.shields.io/badge/%E6%B5%8B%E8%AF%95%E6%AC%A1%E6%95%B0-284-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
+![IMG.SHIELD.IO](https://img.shields.io/badge/%E6%B5%8B%E8%AF%95%E6%AC%A1%E6%95%B0-419-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
 
 ![IMG.SHIELD.IO](https://img.shields.io/badge/%E5%BC%80%E5%8F%91%E4%BB%A3%E5%8F%B7-COMET-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
 
 ![IMG.SHIELD.IO](https://img.shields.io/badge/Haohanyh%20HAMOS%20ProjectY%20%E5%8D%8E%E4%B8%BA%E5%87%BD%E6%95%B0%20-1.3-gray.svg?colorA=007FFC&colorB=4DDDFC&style=for-the-badge)
 
-# 7月25号，入驻华为云CodeHub
-从ProjectY 2.0.362开始，我们接下来的项目，都会进入华为云CodeHub进行任务分配、代码备份。
-[![Code Health](https://hn.devcloud.huaweicloud.com/api/codecheck/v1/codecheck/task/codehealth.svg?taskId=1a25beac64c9495d84df6d9bd85c67c6)](https://hn.devcloud.huaweicloud.com/api/codecheck/project/d8cbe7f927294228b3824ff5d6d2f538/codecheck/task/1a25beac64c9495d84df6d9bd85c67c6/detail)
-
-# 使用到的硬件 和 硬件重要资料
+    # 使用到的硬件 和 硬件重要资料
 ### Hi3861 BearPi小熊派 护花使者套装版
 > 购买地址:[tb](https://item.taobao.com/item.htm?ft=t&id=645216486457)
 > 芯片资料:[点我下载](https://gitee.com/bearpi/bearpi-hm_nano/raw/master/applications/BearPi/BearPi-HM_Nano/docs/board/BearPi_HM%20Nano%20%E8%8A%AF%E7%89%87%E6%89%8B%E5%86%8C.pdf)
@@ -59,7 +55,7 @@ public boolean HaohanyhOranMeCDNDecideData(...) throws JSONException {...}
 
 | 软件开发情况 | 完工程度 | 后续更新情况 |
 |:----|:----:|:----:|
-| Android APP | 95% | 优化代码为8月份的重点工作 |
+| Android APP | 99% | 剩下的就是我想做的功能了嘿嘿 |
 | HarmonyOS HAP | 0% | 准备开始，并且暑期与Android APP联动发展! |
 | Windows EXE | 0% | 计划中... |
 
@@ -70,6 +66,7 @@ Android APP对应版本号:
 | 1.0.18 | ⭐Aurora | 2022.07.19 |
 | 2.0.362 | ⛰️Basin | 2022.07.24 |
 | 2.2.284 | ☄️Comet | 2022.08.15 |
+| 2.2.419 | ☄️Comet | 2022.08.26 |
 | ?.?.??? | 🏜️Desert | ????.??.?? |
 | ?.?.??? | 🌐Earth | ????.??.?? |
 | ...... | ...... | ...... |

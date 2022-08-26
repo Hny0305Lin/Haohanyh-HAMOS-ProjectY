@@ -12,9 +12,11 @@ import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 
+import com.haohanyh.hamos.nfc.NFCBase;
+
 import java.nio.charset.Charset;
 
-public class NFCActivity extends BaseNFCActivity {
+public class NFCActivity extends NFCBase {
     //初始化两个变量，这个很重要，一个是我们打印目前的参数到GUI页面，一个是判断是否可写数据到小熊派
     public EditText NfcData;
     private boolean isWrite = false;

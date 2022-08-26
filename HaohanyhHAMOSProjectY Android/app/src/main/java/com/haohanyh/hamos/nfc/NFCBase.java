@@ -1,5 +1,5 @@
 /* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE */
-package com.haohanyh.hamos.projecty;
+package com.haohanyh.hamos.nfc;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,9 +8,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import com.haohanyh.hamos.nfc.NFCHelper;
-
-public class BaseNFCActivity extends Activity {
+public class NFCBase extends Activity {
     protected NFCHelper nfcHelper;
 
     @Override
@@ -32,7 +30,7 @@ public class BaseNFCActivity extends Activity {
                 nfcHelper.GoToNFCSetting(this);
             }
         } else {
-            Toast.makeText(BaseNFCActivity.this,"当前设备不支持NFC功能",Toast.LENGTH_SHORT).show();
+            Toast.makeText(NFCBase.this,"当前设备不支持NFC功能",Toast.LENGTH_SHORT).show();
         }
     }
 

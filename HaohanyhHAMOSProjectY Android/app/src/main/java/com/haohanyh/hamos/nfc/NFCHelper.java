@@ -1,3 +1,4 @@
+/* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE */
 package com.haohanyh.hamos.nfc;
 
 import android.annotation.SuppressLint;
@@ -114,7 +115,6 @@ public class NFCHelper {
 
     /*
      * 向NFC标签中写入NDEF格式数据
-     * 目前暂不确认护花使者我们该写入的是NFC标签还是Tag，正在研究。
      */
     public boolean writeNFC_NDEF(Intent intent, String text) {
         if (intent != null && text != null) {
