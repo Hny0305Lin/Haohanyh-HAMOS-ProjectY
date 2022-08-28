@@ -27,7 +27,7 @@ public class SaveWLANData {
     private String weruygker =  null;private String werrgfjer =  null;//第四个
 
     public SaveWLANData() {};
-    public static SaveWLANData GetSaveData() { return SaveWLANData.savedata.thing; }
+    public static SaveWLANData NeedSaveData() { return SaveWLANData.savedata.thing; }
     protected static class savedata { private static final SaveWLANData thing = new SaveWLANData(); }
 
     public String ProcessDataToWriteFile() {

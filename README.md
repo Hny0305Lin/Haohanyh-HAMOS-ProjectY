@@ -7,11 +7,11 @@ Haohanyh-HAMOS-ProjectY是我们的一个LiGHTs计划中的部分，继ProjectX�
 
 [![OSCS Status](https://www.oscs1024.com/platform/badge/Hny0305Lin/Haohanyh-HAMOS-ProjectY.svg?size=large)](https://www.oscs1024.com/project/Hny0305Lin/Haohanyh-HAMOS-ProjectY?ref=badge_large)
 
-![IMG.SHIELD.IO](https://img.shields.io/badge/Haohanyh%20HAMOS%20ProjectY%20-Release.2.2.419.2022.0826.Haohanyh.Comet-gray.svg?colorA=007FFC&colorB=4DDDFC&style=for-the-badge)
+![IMG.SHIELD.IO](https://img.shields.io/badge/Haohanyh%20HAMOS%20ProjectY%20-Release.2.2.441.2022.0829.Haohanyh.Comet-gray.svg?colorA=007FFC&colorB=4DDDFC&style=for-the-badge)
 
 ![IMG.SHIELD.IO](https://img.shields.io/badge/%E5%85%B7%E4%BD%93%E7%89%88%E6%9C%AC-Release.2.2.0-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
 
-![IMG.SHIELD.IO](https://img.shields.io/badge/%E6%B5%8B%E8%AF%95%E6%AC%A1%E6%95%B0-419-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
+![IMG.SHIELD.IO](https://img.shields.io/badge/%E6%B5%8B%E8%AF%95%E6%AC%A1%E6%95%B0-441-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
 
 ![IMG.SHIELD.IO](https://img.shields.io/badge/%E5%BC%80%E5%8F%91%E4%BB%A3%E5%8F%B7-COMET-gray.svg?colorA=4DDDFC&colorB=007FFC&style=for-the-badge)
 
@@ -23,7 +23,7 @@ Haohanyh-HAMOS-ProjectY是我们的一个LiGHTs计划中的部分，继ProjectX�
 > 芯片资料:[点我下载](https://gitee.com/bearpi/bearpi-hm_nano/raw/master/applications/BearPi/BearPi-HM_Nano/docs/board/BearPi_HM%20Nano%20%E8%8A%AF%E7%89%87%E6%89%8B%E5%86%8C.pdf)
 > 有关资料:[gitee点我查看](https://gitee.com/bearpi/bearpi-hm_nano)
 > 往期我们的ProjectX:[Github](https://github.com/Hny0305Lin/Haohanyh-HAMOS-ProjectX) [Gitee](https://gitee.com/light-harmonyOS/Haohanyh-HAMOS-ProjectX)
-> 这一次我们的PrijectY：[Github](https://github.com/Hny0305Lin/Haohanyh-HAMOS-ProjectY) [Gitee](https://gitee.com/light-harmonyOS/Haohanyh-HAMOS-ProjectY)
+> 这一次我们的ProjectY：[Github](https://github.com/Hny0305Lin/Haohanyh-HAMOS-ProjectY) [Gitee](https://gitee.com/light-harmonyOS/Haohanyh-HAMOS-ProjectY)
 ⚠️强烈建议中国大陆用户能使用GitHub就使用GitHub，Gitee仅仅是我们浩瀚银河中国大陆的仓库设置地，未来可能会缺少重要更新。
 
 # 继ProjectX项目后的又一份，继续使用浩瀚银河的自有中文开源协议和鸿蒙硬件操作系统与Android APP的结合项目
@@ -67,6 +67,7 @@ Android APP对应版本号:
 | 2.0.362 | ⛰️Basin | 2022.07.24 |
 | 2.2.284 | ☄️Comet | 2022.08.15 |
 | 2.2.419 | ☄️Comet | 2022.08.26 |
+| 2.2.441 | ☄️Comet | 2022.08.29 |
 | ?.?.??? | 🏜️Desert | ????.??.?? |
 | ?.?.??? | 🌐Earth | ????.??.?? |
 | ...... | ...... | ...... |
@@ -83,6 +84,16 @@ HarmonyOS HAP对应版本号:
 | ...... | ...... | ...... |
 
 ProjectX我们已经交出一份答卷了，ProjectY将会是我们第二份答卷，我们有信心，有能力，让ProjectX ProjectY两大项目成为我们全新的起点。
+
+### 该软件目前已经迭代到2.2版本了，但是我们不做“凉心软件”!
+> HAMOS Project:Y该软件，仅提供护花使者所需功能，毫无任何广告、冗余代码、进程抢占等任何国产软件无良低级行为！
+
+> 浩瀚银河绝不做这样的软件来祸害每一位开发者和我们的用户，这样会让我们走的更惨，让我们无法成为开发行业里的那一颗“浩瀚银河中的璀璨星光”。
+
+我们的专业测试设备XiaoMi 9，运行于MIUI13 22.3.18魔改系统、Android 11内核系统、4.14.180-perf-gb24d113核心版本这样的环境下，**8GB内存仅占用154MB！**
+
+
+
 
 # 项目使用到的开源协议
 

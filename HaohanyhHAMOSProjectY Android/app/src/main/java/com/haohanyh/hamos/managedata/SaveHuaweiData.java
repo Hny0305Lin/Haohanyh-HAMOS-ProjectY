@@ -30,7 +30,7 @@ public class SaveHuaweiData {
     private String werobfker =  null;//第三个
 
     public SaveHuaweiData() {};
-    public static SaveHuaweiData GetSaveData() { return SaveHuaweiData.savedata.thing; }
+    public static SaveHuaweiData NeedSaveData() { return SaveHuaweiData.savedata.thing; }
     protected static class savedata { private static final SaveHuaweiData thing = new SaveHuaweiData(); }
 
     public String ProcessDataToWriteFile() {

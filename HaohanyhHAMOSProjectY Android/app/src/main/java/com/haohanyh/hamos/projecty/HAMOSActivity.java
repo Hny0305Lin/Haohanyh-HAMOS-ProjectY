@@ -162,6 +162,28 @@ public class HAMOSActivity extends Activity {
                         }
                     });
                 }
+                for(int i = 0;i < jsonArray.length(); i++){
+                    //第一层，reported，取version明白已上报次数
+                    JSONObject obj = jsonArray.getJSONObject(i);
+                    Object reported = obj.get("reported");
+                    String VersionResult = obj.getString("version");
+                    //第二层，properties，里面就有我们要的数据的同时，可以取时间值
+                    JSONObject Two = new JSONObject(String.valueOf(reported));
+                    String TimeResult = Two.getString("event_time");
+                    String properties = Two.getString("properties");
+                    //最后一层，我们取里面，传感器上报到华为云的数据，这一些代码才是精华
+                    JSONObject Last = new JSONObject(properties);
+                    String TemperatureResult = Last.getString("Temperature");
+                    String HumidityResult = Last.getString("Humidity");
+                    String SoilResult = Last.getString("Soil_Moisture");
+                    //设置值，开始写入文件
+                    com.haohanyh.hamos.managedata.SaveSensorData.NeedSaveData().setTemp(TemperatureResult);
+                    com.haohanyh.hamos.managedata.SaveSensorData.NeedSaveData().setHumi(HumidityResult);
+                    com.haohanyh.hamos.managedata.SaveSensorData.NeedSaveData().setSoil(SoilResult);
+                    com.haohanyh.hamos.managedata.SaveSensorData.NeedSaveData().setTime(TimeResult);
+                    com.haohanyh.hamos.managedata.SaveSensorData.NeedSaveData().setNum(VersionResult);
+                    com.haohanyh.hamos.managedata.SaveSensorData.NeedSaveData().WriteFile();
+                }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -222,7 +244,7 @@ public class HAMOSActivity extends Activity {
                 @Override
                 public void onClick(View view) {
                     //存IAM
-                    boolean aBoolean = SaveHuaweiData.GetSaveData().WriteFile();
+                    boolean aBoolean = SaveHuaweiData.NeedSaveData().WriteFile();
                     if(aBoolean) {
                         Toast.makeText(HAMOSActivity.this,getApplicationContext().getFilesDir().getAbsolutePath() + "/HAMOSData/User.json",Toast.LENGTH_SHORT).show();
                     }
@@ -232,7 +254,7 @@ public class HAMOSActivity extends Activity {
                 @Override
                 public void onClick(View view) {
                     //存WLAN
-                    boolean bBoolean = SaveWLANData.GetSaveData().WriteFile();
+                    boolean bBoolean = SaveWLANData.NeedSaveData().WriteFile();
                     if(bBoolean) {
                         Toast.makeText(HAMOSActivity.this,getApplicationContext().getFilesDir().getAbsolutePath() + "/HAMOSData/Wlan.json",Toast.LENGTH_SHORT).show();
                     }

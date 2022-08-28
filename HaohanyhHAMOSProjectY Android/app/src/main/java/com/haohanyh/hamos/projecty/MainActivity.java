@@ -39,6 +39,7 @@ import com.haohanyh.hamos.arithmetic.StringUtils;
 import com.haohanyh.hamos.dataI.Data;
 import com.haohanyh.hamos.managedata.ReadHuaweiAndWlanData;
 import com.haohanyh.hamos.managedata.SaveHuaweiData;
+import com.haohanyh.hamos.managedata.SaveSensorData;
 import com.haohanyh.hamos.managedata.SaveWLANData;
 import com.haohanyh.hamos.projecty.HAMOSGetSomePermission.Permission.Location;
 import com.haohanyh.hamos.projecty.HAMOSGetSomePermission.Permission.Storage;
@@ -165,9 +166,12 @@ public class MainActivity extends Activity {
         //输出些开发者信息，并且供给SaveXXXXData类使用，如果后续想修改成SD卡内保存，可以这里修改写入值
         Log.i("浩瀚银河:","该用户SD卡地址:" + Environment.getExternalStorageDirectory());
         Log.v("浩瀚银河:","该程序存储文件路径:" + getApplicationContext().getFilesDir().getAbsolutePath());
+        //设置保存路径，让保存类
         String FirstLink = getApplicationContext().getFilesDir().getAbsolutePath();
-        SaveHuaweiData.GetSaveData().setDir(FirstLink);
-        SaveWLANData.GetSaveData().setDir(FirstLink);
+        String SecondLink = String.valueOf(Environment.getExternalStorageDirectory());
+        SaveHuaweiData.NeedSaveData().setDir(FirstLink);
+        SaveWLANData.NeedSaveData().setDir(FirstLink);
+        SaveSensorData.NeedSaveData().setDir(SecondLink);
         ReadHuaweiAndWlanData.GetReadData().setDir(FirstLink);
         //2.2.301版本，初始化新增获取权限，获取完了就不会弹出了
         permissions = HAMOSGetSomePermission

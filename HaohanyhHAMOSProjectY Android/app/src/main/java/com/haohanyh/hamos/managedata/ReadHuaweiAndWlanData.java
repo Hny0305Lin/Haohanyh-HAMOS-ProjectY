@@ -56,7 +56,7 @@ public class ReadHuaweiAndWlanData {
             Log.v(TAG,"第二份结束");
             return true;
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.v(TAG,"失败,说明您没有保存,您需要正常启动成功后,手动保存好信息!");
         }
         return false;
     }

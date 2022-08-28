@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">HAMOS Project:Y</string>
-    <string name="app_version">Release.2.2.419.2022.0826.Haohanyh.Comet</string>
+    <string name="app_version">Release.2.2.441.2022.0829.Haohanyh.Comet</string>
     <string name="haohanyh_hamos_lights_project">Haohanyh HAMOS：LiGHTs Project</string>
     <string name="haohanyh_hamos_lights_project_manymain1">护花使者 Android版</string>
     <string name="haohanyh_hamos_lights_project_manymain2">护花使者 NFC页面</string>
+    <string name="haohanyh_hamos_lights_project_manymain3">护花使者 调试API</string>
     <string name="haohanyh_hamos_lights_project_jiaohua">点我浇花</string>
     <string name="haohanyh_hamos_lights_project_CtrlS">保存Huawei账号信息</string>
     <string name="haohanyh_hamos_lights_project_CtrlS2">保存WIAN信息</string>
