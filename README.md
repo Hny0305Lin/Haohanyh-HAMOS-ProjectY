@@ -88,12 +88,11 @@ ProjectX我们已经交出一份答卷了，ProjectY将会是我们第二份答�
 ### 该软件目前已经迭代到2.2版本了，但是我们不做“凉心软件”!
 > HAMOS Project:Y该软件，仅提供护花使者所需功能，毫无任何广告、冗余代码、进程抢占等任何国产软件无良低级行为！
 
-> 浩瀚银河绝不做这样的软件来祸害每一位开发者和我们的用户，这样会让我们走的更惨，让我们无法成为开发行业里的那一颗“浩瀚银河中的璀璨星光”。
+> 浩瀚银河绝不做这样的软件来祸害每一位开发者和我们的用户，如果我们这样做，会让我们走的更惨，让我们无法成为开发行业里的那一颗“浩瀚银河中的璀璨星光”。
 
 我们的专业测试设备XiaoMi 9，运行于MIUI13 22.3.18魔改系统、Android 11内核系统、4.14.180-perf-gb24d113核心版本这样的环境下，**8GB内存仅占用154MB！**
 
-
-
+![有图为证，调用安卓开发者设置，PowerMonitor，ShowProcessActivity](https://raw.githubusercontent.com/Hny0305Lin/Haohanyh-HAMOS-ProjectY/master/HaohanyhHAMOSProjectY%20Resource/APP%E6%83%85%E5%86%B5/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220829024648.jpg)
 
 # 项目使用到的开源协议
 
